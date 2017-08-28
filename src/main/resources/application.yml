@@ -1,3 +1,19 @@
 server:
   port: 80
   context-path: /vipdinner
+
+spring:
+  datasource:
+    driver-class-name: org.hsqldb.jdbcDriver
+    url: jdbc:hsqldb:mem:vipdinner
+    username: sa
+    password: sa
+  jpa:
+      hibernate:
+        ddl-auto: create
+      database-platform: org.hibernate.dialect.HSQLDialect
+  points:
+    refresh:
+      enabled: true
+    restart:
+      enabled: true
