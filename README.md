@@ -13,7 +13,11 @@ The service uses an in-memoru database. So, keep the initial menu course safe in
 * GET http://[public_ip_or_domain]/vipdinner
   - Lists all items already created
 * POST http://[public_ip_or_domain]/vipdinner/create
+  - Item in the body
   - Create a new Item
+* POST http://[public_ip_or_domain]/vipdinner/bulkCreate
+  - List of Items in the body
+  - Create new Items
 
 ## Item body
 
