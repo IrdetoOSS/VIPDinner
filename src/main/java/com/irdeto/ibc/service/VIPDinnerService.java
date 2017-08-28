@@ -22,6 +22,10 @@ public class VIPDinnerService {
     return itemRepository.save(item);
   }
 
+  public List<Item> saveAll(final List<Item> items) {
+    return itemRepository.save(items);
+  }
+
   public List<Item> findAll() {
     return itemRepository.findAll();
   }

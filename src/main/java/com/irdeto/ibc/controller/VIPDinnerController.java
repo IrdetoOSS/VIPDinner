@@ -23,9 +23,14 @@ public class VIPDinnerController {
     this.vipDinnerService = vipDinnerService;
   }
 
-  @PostMapping(consumes = APPLICATION_JSON_UTF8_VALUE, produces = APPLICATION_JSON_UTF8_VALUE)
+  @PostMapping(value = "/create", consumes = APPLICATION_JSON_UTF8_VALUE, produces = APPLICATION_JSON_UTF8_VALUE)
   public Item create(final @RequestBody Item item) {
     return vipDinnerService.save(item);
+  }
+
+  @PostMapping(value = "bulkCreate", consumes = APPLICATION_JSON_UTF8_VALUE, produces = APPLICATION_JSON_UTF8_VALUE)
+  public List<Item> bulkCreate(final @RequestBody List<Item> items) {
+    return vipDinnerService.saveAll(items);
   }
 
   @GetMapping(value = "/", produces = APPLICATION_JSON_UTF8_VALUE)
