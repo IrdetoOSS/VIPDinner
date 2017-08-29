@@ -1,6 +1,6 @@
-FROM openjdk:jre-slim
+FROM openjdk:jre-alpine
 
-RUN apt-get -y update && apt-get install -y vim procps
+RUN apk update && apk add vim procps
 
 COPY build/libs/VIPDinner-1.0-SNAPSHOT.jar /irdeto-oss/VIPDinner.jar
 
